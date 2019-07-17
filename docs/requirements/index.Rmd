@@ -1,0 +1,41 @@
+---
+title: "Requirements"
+subtitle: "Reproducible Data Workflows with drake"
+author: "Garrick Aden-Buie"
+date: "7/17/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Packages
+
+We'll need the following packages to get started.
+Comment out or delete the lines containing any packages in `required_packages` that you already have installed on your system.
+
+```{r eval=FALSE}
+required_packages <- c(
+  "tidyverse",  #<< For data processing, etc.
+  "cowplot",    #<< For composing ggplot2 plots
+  "visNetwork", #<< For visualizing drake plans
+  "drake"       #<< Because drake
+)
+
+install.packages(required_packages)
+```
+
+## Data and Materials
+
+TODO
+
+---
+
+<details><summary>My Session Info</summary>
+
+```{r}
+devtools::session_info()
+```
+
+</details>
