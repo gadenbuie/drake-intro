@@ -12,10 +12,13 @@ knitr::opts_chunk$set(
   fig.height = 6, fig.width = 10, fig.retina = 2
 )
 
+# load {drake}
+library(drake)
+
 # Packages
 library(dplyr)
 library(tidyr)
-library(drake)
+library(forcats)
 ```
 
 
