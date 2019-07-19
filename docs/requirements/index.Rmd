@@ -28,7 +28,9 @@ install.packages(required_packages)
 
 ## Data and Materials
 
-TODO
+You can explore this workshop in a pre-loaded [RStudio cloud instance](https://rstudio.cloud/project/405721).
+
+Or download the code and data from [github.com/gadenbuie/drake-intro](https://github.com/gadenbuie/drake-intro).
 
 ---
 

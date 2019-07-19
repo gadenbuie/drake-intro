@@ -1,5 +1,6 @@
 report.html
 report_files/
+.drake
 
 # ---- Default .gitignore From grkmisc ----
 .Rproj.user
