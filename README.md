@@ -21,7 +21,7 @@ This is a one-hour talk/workshop introduction to the basic concepts of [drake].
 
 &#x26A0;&#xFE0F; [Required Packages](https://pkg.garrickadenbuie.com/drake-intro/requirements/)
 
-You explore [a notebook version of the analysis](https://pkg.garrickadenbuie.com/drake-intro/notebook/) to see the project before it became a [drake] project.
+You can explore [a notebook version of the analysis](https://pkg.garrickadenbuie.com/drake-intro/notebook/) to see the project before it became a [drake] project.
 The example drake project (and interactive coding portion) focuses on a drake workflow recreating tables and figures from
 
 > Chetty R, Stepner M, Abraham S, et al. 
