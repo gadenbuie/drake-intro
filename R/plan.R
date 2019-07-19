@@ -1,5 +1,5 @@
 plan <- drake_plan(
-  life_exp = read_csv(life_exp_file),
+  life_exp = read_csv(file_in("data/health_ineq_online_table_9.csv")),
 
   life_exp_tidy = tidy_life_exp(life_exp),
 

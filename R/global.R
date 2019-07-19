@@ -1,4 +1,3 @@
-life_exp_file <- here::here("data", "health_ineq_online_table_9.csv")
 
 income_quantiles <- c(
   "1" = "Bottom",
