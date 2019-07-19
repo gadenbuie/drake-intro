@@ -85,7 +85,7 @@ messy_slides <- dir("assets/images/drawn", pattern = "messy.+jpg$", full.names =
 
 messy_slides_txt <- glue::glue("
 
-class: hide-count
+class: hide-count animated fadeIn
 background-image: url('{messy_slides}')
 background-size: contain
 
@@ -115,7 +115,7 @@ proj_slides <- dir("assets/images/drawn", pattern = "project.+jpg$", full.names 
 
 proj_slides_txt <- glue::glue("
 
-class: hide-count
+class: hide-count animated fadeIn
 background-image: url('{proj_slides}')
 background-size: contain
 
