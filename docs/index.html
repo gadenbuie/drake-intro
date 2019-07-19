@@ -4,17 +4,24 @@
     <title>Reproducible Data Workflows With Drake</title>
     <meta charset="utf-8" />
     <meta name="author" content="Garrick Aden-Buie" />
-    <link rel="stylesheet" href="moffitt-xaringan.css" type="text/css" />
+    <link href="libs/countdown-0.3.3/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown-0.3.3/countdown.js"></script>
+    <link rel="stylesheet" href="assets/css/tachyons.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/moffitt-xaringan.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/moffitt-colors.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 
 
-class: left bottom
-background-image: url(images/bench-accounting-xxeAftHHq6E-unsplash.jpg)
+
+
+class: left bottom hide-count
+background-image: url(assets/images/bench-accounting-xxeAftHHq6E-unsplash.jpg)
 background-size: 100%
 
-&lt;div class="talk-logo"&gt;&lt;/div&gt;
+&lt;div class="talk-logo drake-logo"&gt;&lt;/div&gt;
 
 .talk-meta[
 .talk-title[
@@ -32,24 +39,720 @@ July 19th, 2019
 
 ---
 
-class: inverse center middle
+class: top hide-count
 
-## What the what is drake?
+.f1.pt4[
+&lt;img class="icon-huge pr3" src="assets/images/cloud-upload.svg" width="100px"/&gt;
+`rstudio.cloud/project/123456`
+]
 
+.f1[
+&lt;img class="icon-huge pr3" src="assets/images/desktop-download.svg" width="100px"/&gt;
+`usethis::use_course("course-url")`
+]
+
+.f1[
+&lt;img class="icon-huge pr3" src="assets/images/mark-github.svg" width="100px"/&gt;
+[github.com/gadenbuie/drake-intro](https://github.com/gadenbuie/drake-intro)
+]
+
+.f2.silver.center.mt5[Find someone to sit next to and share laptops]
+
+---
+
+class: inverse center middle hide-count
+
+## What is drake?
+
+--
+
+![](assets/images/drake_meme.jpg)
+
+---
+
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-02.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-03.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-04.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-05.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-06.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-07.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-08.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-09.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-10.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-11.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-12.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-13.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-14.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-15.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-16.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-17.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-18.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-19.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-20.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-21.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-22.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-23.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-24.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-25.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-26.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-27.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-28.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-29.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-30.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-31.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/messy-workflow-32.jpg')
+background-size: contain
+
+---
+
+class: middle
+background-image: url('assets/images/drawn/messy-workflow-32.jpg')
+background-size: contain
+
+.f2.moffitt-bg-light-blue-o90.white.pa5.strong[
+* Will this work when I come back to it later?
+
+* What happens if I re-run _everything_?
+
+* Am I certain that the results are still valid?
+]
+
+---
+
+
+class: hide-count
+background-image: url('assets/images/drawn/project-spectrum-33.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/project-spectrum-34.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/project-spectrum-35.jpg')
+background-size: contain
+
+---
+
+class: hide-count
+background-image: url('assets/images/drawn/project-spectrum-36.jpg')
+background-size: contain
+
+---
+
+
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-37.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-38.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-39.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-40.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-41.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-42.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-43.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-44.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-45.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-46.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-47.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-48.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-49.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-50.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-51.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-52.jpg')
+background-size: contain
+
+---
+
+class: hide-count animated fadeIn
+background-image: url('assets/images/drawn/drake-intro-53.jpg')
+background-size: contain
+
+---
+
+
+layout: true
+class: animated fadeIn
+background-image: url(https://ropensci.github.io/drake/figures/infographic.svg)
+background-size: 100%
+background-position: 40% left
+---
+
+.bg-white.h-100.w-80.fixed.o-90.cover-2-3[
+]
+
+---
+
+.bg-white.h-100.w-80.fixed.o-90.cover-3[
+]
+
+---
+
+---
+layout: false
+class: center middle inverse hide-count
+
+# Detour: Functions
+
+---
+layout: true
+class: animated fadeIn
+---
+
+.f1.mt4.pa4.code[
+.o-0[verb &lt;- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3.o-0[x, y = 0, ...]) {]  
+.moffitt-green.mh3.pv1.ph4[
+x_range &lt;- max(x) - min(x)
+
+(x - min(x)) / x_range + y
+]
+
+.o-0.dark-gray[}]
+]
+ 
+---
+
+.f1.mt4.pa4.code[
+.o-0[verb &lt;- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3.o-0[x, y = 0, ...]) {]  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph4[
+x_range &lt;- max(x) - min(x)
+
+(x - min(x)) / x_range + y
+]
+
+.o-0.dark-gray[}]
+]
+
+---
+
+.f1.mt4.pa4.code[
+verb &lt;- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3.o-0[x, y = 0, ...]) {  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph4[
+x_range &lt;- max(x) - min(x)
+
+(x - min(x)) / x_range + y
+]
+
+.dark-gray[}]
+]
+
+---
+
+.f1.mt4.pa4.code[
+verb &lt;- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph4.o-40[
+x_range &lt;- max(x) - min(x)
+
+(x - min(x)) / x_range + y
+]
+
+.dark-gray[}]
+]
+    
+---
+
+.f1.mt4.pa4.code[
+verb &lt;- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+x_range &lt;- max(x) - min(x)
+
+(x - min(x)) / x_range + y
+]
+
+.dark-gray[}]
+]
+    
+---
+
+.f1.mt4.pa4.code[
+verb &lt;- .dark-gray[function(].moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+x_range &lt;- max(.moffitt-blue[x]) - min(.moffitt-blue[x])
+
+(.moffitt-blue[x] - min(.moffitt-blue[x])) / x_range + .moffitt-blue[y]
+]
+
+.dark-gray[}]
+]
+    
+---
+
+.f1.mt4.pa4.code[
+verb &lt;- .dark-gray[function(].moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+x_range &lt;- max(.moffitt-blue[x]) - min(.moffitt-blue[x])
+
+.moffitt-bg-orange-o20[(.moffitt-blue[x] - min(.moffitt-blue[x])) / x_range + .moffitt-blue[y]]
+]
+
+.dark-gray[}]
+]
+
+---
+
+.f1.mt4.pa4.code.moffitt-bg-grey-o20[
+verb &lt;- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3.o-30[x, y = 0, ...]) {  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph4.o-50[
+x_range &lt;- max(x) - min(x)
+
+(x - min(x)) / x_range + y
+]
+
+.dark-gray[}]
+]
+    
+---
+
+.f1.mt4.pa4.code.moffitt-bg-grey-o20[
+scale &lt;- .dark-gray[function(].moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+x_range &lt;- max(.moffitt-blue[x]) - min(.moffitt-blue[x])
+
+(.moffitt-blue[x] - min(.moffitt-blue[x])) / x_range + .moffitt-blue[y]
+]
+
+.dark-gray[}]
+]
+    
+---
+
+.f1.mt4.pa4.code.moffitt-bg-grey-o20[
+scale &lt;- .dark-gray[function(].moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, .moffitt-red[...]]) {  
+.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+x_r &lt;- max(.moffitt-blue[x], .moffitt-red[...]) - min(.moffitt-blue[x], .moffitt-red[...])
+
+(.moffitt-blue[x] - min(.moffitt-blue[x], .moffitt-red[...])) / x_r + .moffitt-blue[y]
+]
+
+.dark-gray[}]
+]
+
+---
+layout: false
+
+## Function Review
+
+* Functions take **inputs** .muted[(also called .code[formals()])]
+
+--
+
+* ... use the inputs in the function **.code[body()]**
+
+--
+
+* ... or find variables within their **scope** .muted[(or .code[environment()])]
+
+--
+
+* ... and **.code[return()]** a value
+
+---
+
+## Your Turn!
+
+The formula for converting Celsius to Fahrenheit is
+
+`$$T_F = \frac 9 5 T_C + 32$$`
+
+* Write a function that converts &amp;deg;C to &amp;deg;F.  
+  What is 20&amp;deg;C?
+
+.muted.w-60[
+Extra challenge:
+
+* Your friend is Canadian and keeps sharing their local whether in &amp;deg;C.
+  Write a function that decides if it's hot or not based on the infinitely more reasonable threshold of 78&amp;deg;F.
+  
+* 78&amp;deg;F is a debatable, make it a parameter
+]
+
+<div class="countdown" id="timer_5d31dacb" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+???
+
+Check with someone else. What is 20&amp;deg;C? It should be 68&amp;deg;F
+
+---
+
+## Function Style Guide
+
+.f2.pt4[
+* Clear **names** like `verb()` or `verb_thing()`
+]
+
+--
+
+.f2.pt4[
+* **Short** functions that do **one**.muted[-ish] thing
+]
+
+--
+
+.f2.pt4[
+* Limit **side-effects** or be explicit .silver[e.g. .code[output = ""]]
+]
+
+---
+layout: true
+## Fail or Return Early
+---
+
+Check your inputs at the top of your function. For type checking you can use
+
+
+```r
+verb &lt;- function(x) {
+  stopifnot(is.numeric(x))
+  
+  # ... more code
+}
+```
+
+--
+
+or for more control over error messages
+
+
+```r
+verb &lt;- function(x) {
+  if (x &lt; 0) {
+    stop("`x` must be non-negative")
+  }
+}
+```
+
+---
+
+Return early from functions to minimize `if ... else` indenting
+
+
+```r
+verb &lt;- function(df) {
+  # some prep work ...
+  
+  if (!nrow(df)) {
+    return(FALSE)
+  }
+  
+  # ... keep going if ok
+}
+```
+
+---
+layout: false
+
+## Pass the Dots
+
+Use the power of the .moffitt-red.moffitt-bg-red-o10.code[...] with the .pkg[tidyverse]
+
+
+```r
+grouped_mean &lt;- function(df, ...) {
+  df %&gt;% 
+    group_by(...) %&gt;% 
+    summarize(mean_expr = mean(expr))
+}
+```
+
+.footnote[
+Jenny Bryan: [Lazy Evaluation](https://resources.rstudio.com/rstudio-conf-2019/lazy-evaluation), rstudio::conf  
+Sharla Gelfand: [tidyeval](https://sharla.party/posts/tidyeval/), sharla.party
+]
+
+---
+class: middle center moffitt-bg-light-blue white hide-count
+
+## Your Turn Again
+
+Update your temperature conversion function to reject  
+non-numeric, unreasonable inputs
+
+<div class="countdown" id="timer_5d31dc52" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+exclude: true
+
+.mt1.pa4.code.mw7[
+verb &lt;- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph4[
+x_range &lt;- max(x) - min(x)
+
+(x - min(x)) / x_range + y
+]
+
+.dark-gray[}]
+]
+
+---
+
+* resources
+  * [Advanced R: Functions](https://adv-r.hadley.nz/functions.html)
+  * [Functions - Nice R Code](https://nicercode.github.io/guides/functions/)
+  * [Programming with R: Creating Functions](https://swcarpentry.github.io/r-novice-inflammation/02-func-R/)
+
+ 
+---
+
+
+```r
+make_rgba &lt;- function(hex, alpha = 1) {
+  rgb &lt;- t(col2rgb(hex))
+  rgb_string &lt;- paste(rgb, collapse = ", ")
+  paste0("rgba(", rgb_string, ", ", alpha, ")")
+}
+```
 
 &lt;style type="text/css"&gt;
 .talk-logo {
   width: 200px;
   height: 231px;
-  background-image: url('images/drake-logo.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
   position: absolute;
   top: 25%;
   left: 12%;
 }
 
+.drake-logo {
+  background-image: url('assets/images/drake-logo.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .talk-meta {
+  font-family: Overpass;
   position: absolute;
   text-align: left;
   bottom: 10px;
@@ -69,6 +772,18 @@ class: inverse center middle
   line-height: 0;
 }
 
+.icon-huge {
+  position: relative; 
+  top: 35px;
+}
+
+.cover-2-3 {
+  left: 33%;
+}
+
+.cover-3 {
+  left: 66%;
+}
 &lt;/style&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
