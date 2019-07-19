@@ -1,0 +1,90 @@
+---
+title: "Trends in Income and Life Expectancy in the United States"
+subtitle: "A demonstration drake project"
+date: "7/19/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# knitr settings
+knitr::opts_chunk$set(
+  echo = TRUE, warning = FALSE, message = FALSE,
+  fig.height = 6, fig.width = 10, fig.retina = 2
+)
+
+# Packages
+library(dplyr)
+library(tidyr)
+library(drake)
+```
+
+
+```{r load-drake-data, echo=FALSE}
+loadd(life_exp_tidy)
+loadd(plot_life_exp)
+loadd(life_exp_model)
+```
+
+
+## Background
+
+> Chetty R, Stepner M, Abraham S, et al. 
+> The Association Between Income and Life Expectancy in the United States, 2001-2014. 
+> JAMA. 2016;315(16):1750–1766. doi:10.1001/jama.2016.4226
+
+From [The Health Inequality Project](https://healthinequality.org/), a project to improve health outcomes for low-income Americans using big data.
+
+
+## A Table
+
+This example report uses the data from **[Table 9](https://healthinequality.org/data/)** (CZ-level by-year life expectancy estimates for men and women, by income quartile).
+
+> This table reports life expectancy point estimates and standard errors for men and women at age 40 for each quartile of the national income distribution by commuting zone of residence and year. Both race-adjusted and unadjusted estimates are reported. Estimates are reported for the 100 largest CZs (populations greater than 590,000) only.
+
+We have loaded and tidied the life expectancy data.
+The data for Tampa look like this:
+
+```{r tidy-life-exp-demo}
+life_exp_tidy %>% 
+  filter(czname == "Tampa") %>% 
+  sample_n(10) %>% 
+  arrange(year) %>% 
+  knitr::kable()
+```
+
+## A Plot
+
+```{r life-exp-plot}
+plot_life_exp
+```
+
+
+## Model Results
+
+We ran a linear regression to determine the average yearly increase or decrease in life expectancy.
+
+```{r model-results-race-adjusted-life-expectancy}
+life_exp_model_results <- 
+  life_exp_model %>% 
+  unnest(est) %>% 
+  filter(term == "year") %>% 
+  select(-adjustment, -term, -std.error, -statistic, -p.value) %>% 
+  spread(income_quantile, estimate) %>% 
+  mutate(czname = fct_reorder(czname, Bottom, .desc = TRUE)) %>% 
+  arrange(czname) %>% 
+  rename(
+    "Commuting Zone" = czname,
+    "State" = state,
+    "Population (2000)" = pop2000
+  )
+```
+
+```{r model-table-race-adjusted-life-expectancy}
+life_exp_model_results %>% 
+  head(n = 10) %>% 
+  knitr::kable(digits = 3, caption = "Top 10 Cities")
+
+life_exp_model_results %>% 
+  tail(n = 10) %>% 
+  knitr::kable(digits = 3, caption = "Worst 10 Cities")
+```

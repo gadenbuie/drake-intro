@@ -43,17 +43,17 @@ class: top hide-count
 
 .f1.pt4[
 &lt;img class="icon-huge pr3" src="assets/images/cloud-upload.svg" width="100px"/&gt;
-`rstudio.cloud/project/123456`
+`rstudio.cloud/project/405721`
 ]
 
 .f1[
 &lt;img class="icon-huge pr3" src="assets/images/desktop-download.svg" width="100px"/&gt;
-`usethis::use_course("course-url")`
+.code.moffitt-blue[usethis::use_zip(".moffitt-orange[github &amp;#x1F447;]")]
 ]
 
 .f1[
 &lt;img class="icon-huge pr3" src="assets/images/mark-github.svg" width="100px"/&gt;
-[github.com/gadenbuie/drake-intro](https://github.com/gadenbuie/drake-intro)
+[github.com/.moffitt-orange[gadenbuie/drake-intro]](https://github.com/gadenbuie/drake-intro)
 ]
 
 .f2.silver.center.mt5[Find someone to sit next to and share laptops]
@@ -261,7 +261,7 @@ class: middle
 background-image: url('assets/images/drawn/messy-workflow-32.jpg')
 background-size: contain
 
-.f2.moffitt-bg-light-blue-o90.white.pa5.strong[
+.f2.moffitt-bg-light-blue-o90.white.pa5.shadow-3[
 * Will this work when I come back to it later?
 
 * What happens if I re-run _everything_?
@@ -408,21 +408,28 @@ background-size: 100%
 background-position: 40% left
 ---
 
+
 .bg-white.h-100.w-80.fixed.o-90.cover-2-3[
+&lt;!-- Cover left two items of drake infographic --&gt;
 ]
 
 ---
 
 .bg-white.h-100.w-80.fixed.o-90.cover-3[
+&lt;!-- Cover left items of drake infographic --&gt;
 ]
 
 ---
 
+&lt;!-- Full drake infographic --&gt;
+
 ---
 layout: false
-class: center middle inverse hide-count
+class: center middle moffitt-bg-blue inverse hide-count
 
-# Detour: Functions
+&lt;img class="icon-huge pr3" src="assets/images/noun_detour.svg" width="200px"/&gt;
+
+# Detour — Functions
 
 ---
 layout: true
@@ -596,7 +603,7 @@ Extra challenge:
 * 78&amp;deg;F is a debatable, make it a parameter
 ]
 
-<div class="countdown" id="timer_5d31dacb" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d31fcc5" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -627,6 +634,7 @@ Check with someone else. What is 20&amp;deg;C? It should be 68&amp;deg;F
 ---
 layout: true
 ## Fail or Return Early
+
 ---
 
 Check your inputs at the top of your function. For type checking you can use
@@ -687,7 +695,7 @@ grouped_mean &lt;- function(df, ...) {
 ```
 
 .footnote[
-Jenny Bryan: [Lazy Evaluation](https://resources.rstudio.com/rstudio-conf-2019/lazy-evaluation), rstudio::conf  
+Jenny Bryan: [Lazy Evaluation](https://resources.rstudio.com/rstudio-conf-2019/lazy-evaluation), rstudio::conf(2019)  
 Sharla Gelfand: [tidyeval](https://sharla.party/posts/tidyeval/), sharla.party
 ]
 
@@ -699,7 +707,7 @@ class: middle center moffitt-bg-light-blue white hide-count
 Update your temperature conversion function to reject  
 non-numeric, unreasonable inputs
 
-<div class="countdown" id="timer_5d31dc52" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d31ff59" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -719,22 +727,121 @@ x_range &lt;- max(x) - min(x)
 
 ---
 
-* resources
-  * [Advanced R: Functions](https://adv-r.hadley.nz/functions.html)
-  * [Functions - Nice R Code](https://nicercode.github.io/guides/functions/)
-  * [Programming with R: Creating Functions](https://swcarpentry.github.io/r-novice-inflammation/02-func-R/)
+class: inverse center middle
 
+## An Example drake Project
+
+---
+layout: true
+
+.center[
+## .code[rstudio.cloud/project/405721]
+
+#### .code.gray[usethis::use_course("gadenbuie/drake-intro")]
+]
+
+&lt;hr /&gt;
+
+.muted[Let's code together...]
+
+---
+
+* Open .moffitt-bg-grey-o20.moffitt-blue.code.pa2[drake.R]
+
+* What packages and functions are loaded?
+
+* Walk through .moffitt-bg-grey-o20.moffitt-blue.code.pa2[R/plan.R]
+
+* Preview the work plan
+
+* Run the plan
+
+---
+
+* Use .moffitt-bg-grey-o20.moffitt-red.code.pa2[readd()] and .moffitt-bg-grey-o20.moffitt-red.code.pa2[loadd()] to view results
+
+* View the .moffitt-bg-grey-o20.moffitt-blue.code.pa2[report.html]
+
+* How are _targets_ used in .moffitt-bg-grey-o20.moffitt-blue.code.pa2[report.Rmd]?
+
+--
+
+* How does .pkg[drake] track dependencies in R Markdown?
+
+--
+
+* Do we need to run .moffitt-bg-grey-o20.moffitt-blue.code.pa2[make.R] to be able to update .moffitt-bg-grey-o20.moffitt-blue.code.pa2[report.Rmd]?
  
 ---
 
+The life expectancy plot currently only shows results for Tampa.
 
-```r
-make_rgba &lt;- function(hex, alpha = 1) {
-  rgb &lt;- t(col2rgb(hex))
-  rgb_string &lt;- paste(rgb, collapse = ", ")
-  paste0("rgba(", rgb_string, ", ", alpha, ")")
-}
-```
+* Modify .moffitt-bg-grey-o20.code.pa2[plot_life_exp_gender_income()] in .moffitt-bg-grey-o20.moffitt-blue.code.pa2[R/functions.R] to have a `czname` argument.
+
+* Update the .moffitt-bg-grey-o20.moffitt-blue.code.pa2[R/plan.R] to plot .b[Denver].
+
+* Add .b[Denver] to the .moffitt-bg-grey-o20.moffitt-blue.code.pa2[report.Rmd] to compare with .b[Tampa].
+
+<div class="countdown" id="timer_5d31fd42" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+.muted[... if there is time]
+
+* Convert the code in .moffitt-bg-grey-o20.moffitt-blue.code.pa2[R/scratch.R] into a function .moffitt-bg-grey-o20.code.pa2[plot_life_exp_income()] and add it to the .moffitt-bg-grey-o20.moffitt-blue.code.pa2[R/plan.R].
+
+---
+layout: false
+
+## But wait, there's more!
+
+There is a lot more that .pkg[drake] can do, including:
+
+1. [Predict total runtime](https://ropenscilabs.github.io/drake-manual/time.html#predict-total-runtime) of your plan
+
+  ```r
+  predict_runtime(config)
+  ```
+
+1. Parameterized targets for hyperparameter selection in [large plans](https://ropenscilabs.github.io/drake-manual/plans.html#large-plans)
+
+1. [Parallel computation](https://ropenscilabs.github.io/drake-manual/hpc.html#parallel-backends) of targets
+
+1. Distribute and run targets on [HPC clusters](https://ropenscilabs.github.io/drake-manual/hpc.html)
+
+---
+
+### Resources
+
+.flex[
+.w-40.ph4[
+Drake
+
+* [User Manual](https://ropenscilabs.github.io/drake-manual/)
+* [Package Docs](https://ropensci.github.io/drake/)
+* [ropensci/drake](https://github.com/ropensci/drake)
+]
+.w-60.ph4[
+Functions
+
+* [Advanced R: Functions](https://adv-r.hadley.nz/functions.html)
+* [Functions - Nice R Code](https://nicercode.github.io/guides/functions/)
+* [Programming with R: Creating Functions](https://swcarpentry.github.io/r-novice-inflammation/02-func-R/)
+]
+]
+
+### Credit
+
+Icons by [Github octicons](https://octicons.github.com/) and the following [Noun Project](https://thenounproject.com/search/?q=Report&amp;i=180805) icon creators:
+
+- [Kirby Wu, TW](https://thenounproject.com/search/?q=json&amp;i=966215)
+- [Iga](https://thenounproject.com/search/?q=document&amp;i=2711779)
+- [Lil Squid](https://thenounproject.com/search/?q=report&amp;i=149914)
+- [Wichai Wi](https://thenounproject.com/search/?q=results&amp;i=2294590)
+- [Nick Kinling](https://thenounproject.com/search/?q=detour&amp;i=788361)
+
 
 &lt;style type="text/css"&gt;
 .talk-logo {
