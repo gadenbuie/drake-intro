@@ -11,6 +11,8 @@ output:
       - assets/css/moffitt-xaringan.css
       - assets/css/moffitt-colors.css
     seal: false
+    mathjax: false
+    chakra: libs/remark-latest.min.js
     nature:
       titleSlideClass: ["bottom", "left"]
       slideNumberFormat: "%current%"
@@ -28,7 +30,7 @@ knitr::opts_chunk$set(
 ```
 
 class: left bottom hide-count
-background-image: url(assets/images/bench-accounting-xxeAftHHq6E-unsplash.jpg)
+background-image: url(assets/images/bench-accounting-xxeAftHHq6E-unsplash.webp)
 background-size: 100%
 
 <div class="talk-logo drake-logo"></div>
@@ -76,12 +78,12 @@ class: inverse center middle hide-count
 
 --
 
-![](assets/images/drake_meme.jpg)
+![](assets/images/drake_meme.webp)
 
 ---
 
 ```{r messy-data-workflow, echo=FALSE, results="asis"}
-messy_slides <- dir("assets/images/drawn", pattern = "messy.+jpg$", full.names = TRUE)
+messy_slides <- dir("assets/images/drawn", pattern = "messy.+.webp$", full.names = TRUE)
 
 messy_slides_txt <- glue::glue("
 
@@ -97,7 +99,7 @@ cat(messy_slides_txt, sep = "")
 ```
 
 class: middle
-background-image: url('assets/images/drawn/messy-workflow-32.jpg')
+background-image: url('assets/images/drawn/messy-workflow-32.webp')
 background-size: contain
 
 .f2.moffitt-bg-light-blue-o90.white.pa5.shadow-3[
@@ -111,7 +113,7 @@ background-size: contain
 ---
 
 ```{r project-spectrum, echo=FALSE, results="asis"}
-proj_slides <- dir("assets/images/drawn", pattern = "project.+jpg$", full.names = TRUE)
+proj_slides <- dir("assets/images/drawn", pattern = "project.+.webp$", full.names = TRUE)
 
 proj_slides_txt <- glue::glue("
 
@@ -128,7 +130,7 @@ cat(proj_slides_txt, sep = "")
 
 
 ```{r drake-intro, echo=FALSE, results="asis"}
-drake_intro <- dir("assets/images/drawn", pattern = "drake-intro-\\d+[.]jpg$", full.names = TRUE)
+drake_intro <- dir("assets/images/drawn", pattern = "drake-intro-\\d+[.].webp$", full.names = TRUE)
 
 drake_intro_txt <- glue::glue("
 
@@ -146,7 +148,7 @@ cat(drake_intro_txt, sep = "")
 
 layout: true
 class: animated fadeIn
-background-image: url(https://ropensci.github.io/drake/figures/infographic.svg)
+background-image: url('assets/images/drake-infographic.svg')
 background-size: 100%
 background-position: 40% left
 ---
@@ -332,7 +334,9 @@ layout: false
 
 The formula for converting Celsius to Fahrenheit is
 
-$$T_F = \frac 9 5 T_C + 32$$
+.center[
+<span style="font-size: 100%; display: inline-block; position: relative;" id="MathJax-Element-1-Frame" tabindex="0" role="presentation" class=""><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>T</mi><mi>F</mi></msub><mo>=</mo><mfrac><mn>9</mn><mn>5</mn></mfrac><msub><mi>T</mi><mi>C</mi></msub><mo>+</mo><mn>32</mn></math></span></span>
+]
 
 * Write a function that converts &deg;C to &deg;F.  
   What is 20&deg;C?
