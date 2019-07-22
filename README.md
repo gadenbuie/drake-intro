@@ -19,7 +19,7 @@ This is a one-hour talk/workshop introduction to the basic concepts of [drake].
 
 &#x1F4BE; Run locally: `usethis::use_course("gadenbuie/drake-intro")`
 
-&#x26A0;&#xFE0F; [Required Packages](https://pkg.garrickadenbuie.com/drake-intro/requirements/)
+&#x26A0;&#xFE0F; Required Packages: [view online](https://pkg.garrickadenbuie.com/drake-intro/requirements/), [view in repo](docs/requirements/index.Rmd)
 
 You can explore [a notebook version of the analysis](https://pkg.garrickadenbuie.com/drake-intro/notebook/) to see the project before it became a [drake] project.
 The example drake project (and interactive coding portion) focuses on a drake workflow recreating tables and figures from

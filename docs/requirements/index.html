@@ -377,7 +377,6 @@ $(document).ready(function () {
 <h1 class="title toc-ignore">Requirements</h1>
 <h3 class="subtitle">Reproducible Data Workflows with drake</h3>
 <h4 class="author">Garrick Aden-Buie</h4>
-<h4 class="date">7/17/2019</h4>
 
 </div>
 
@@ -386,10 +385,11 @@ $(document).ready(function () {
 <h2>Packages</h2>
 <p>We’ll need the following packages to get started. Comment out or delete the lines containing any packages in <code>required_packages</code> that you already have installed on your system.</p>
 <pre class="r"><code>required_packages &lt;- c(
-  &quot;tidyverse&quot;,  #&lt;&lt; For data processing, etc.
-  &quot;cowplot&quot;,    #&lt;&lt; For composing ggplot2 plots
-  &quot;visNetwork&quot;, #&lt;&lt; For visualizing drake plans
-  &quot;drake&quot;       #&lt;&lt; Because drake
+  # &quot;tidyverse&quot;,  #&lt;&lt; For data processing, etc. (you probably have this)
+  &quot;here&quot;,         #&lt;&lt; For sane path management
+  &quot;cowplot&quot;,      #&lt;&lt; For composing ggplot2 plots
+  &quot;visNetwork&quot;,   #&lt;&lt; For visualizing drake plans
+  &quot;drake&quot;         #&lt;&lt; Because drake
 )
 
 install.packages(required_packages)</code></pre>
@@ -412,7 +412,7 @@ install.packages(required_packages)</code></pre>
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2019-07-19                  
+##  date     2019-07-22                  
 ## 
 ## ─ Packages ──────────────────────────────────────────────────────────────
 ##  package     * version    date       lib source                      

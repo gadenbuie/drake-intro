@@ -2,7 +2,6 @@
 title: "Requirements"
 subtitle: "Reproducible Data Workflows with drake"
 author: "Garrick Aden-Buie"
-date: "7/17/2019"
 output: html_document
 ---
 
@@ -17,10 +16,11 @@ Comment out or delete the lines containing any packages in `required_packages` t
 
 ```{r eval=FALSE}
 required_packages <- c(
-  "tidyverse",  #<< For data processing, etc.
-  "cowplot",    #<< For composing ggplot2 plots
-  "visNetwork", #<< For visualizing drake plans
-  "drake"       #<< Because drake
+  # "tidyverse",  #<< For data processing, etc. (you probably have this)
+  "here",         #<< For sane path management
+  "cowplot",      #<< For composing ggplot2 plots
+  "visNetwork",   #<< For visualizing drake plans
+  "drake"         #<< Because drake
 )
 
 install.packages(required_packages)

@@ -11,6 +11,5 @@ library(forcats)
 library(ggplot2)
 
 # Other packages
-library(here)
 library(broom)
 library(cowplot)
