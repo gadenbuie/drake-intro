@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 ```
 
 class: left bottom hide-count
-background-image: url(assets/images/bench-accounting-xxeAftHHq6E-unsplash.webp)
+background-image: url(assets/images/bench-accounting-xxeAftHHq6E-unsplash.jpg)
 background-size: 100%
 
 <div class="talk-logo drake-logo"></div>
@@ -78,12 +78,12 @@ class: inverse center middle hide-count
 
 --
 
-![](assets/images/drake_meme.webp)
+![](assets/images/drake-meme.jpg)
 
 ---
 
 ```{r messy-data-workflow, echo=FALSE, results="asis"}
-messy_slides <- dir("assets/images/drawn", pattern = "messy.+.webp$", full.names = TRUE)
+messy_slides <- dir("assets/images/drawn", pattern = "messy.+.jpg$", full.names = TRUE)
 
 messy_slides_txt <- glue::glue("
 
@@ -99,7 +99,7 @@ cat(messy_slides_txt, sep = "")
 ```
 
 class: middle
-background-image: url('assets/images/drawn/messy-workflow-32.webp')
+background-image: url('assets/images/drawn/messy-workflow-32.jpg')
 background-size: contain
 
 .f2.moffitt-bg-light-blue-o90.white.pa5.shadow-3[
@@ -113,7 +113,7 @@ background-size: contain
 ---
 
 ```{r project-spectrum, echo=FALSE, results="asis"}
-proj_slides <- dir("assets/images/drawn", pattern = "project.+.webp$", full.names = TRUE)
+proj_slides <- dir("assets/images/drawn", pattern = "project.+.jpg$", full.names = TRUE)
 
 proj_slides_txt <- glue::glue("
 
@@ -130,7 +130,7 @@ cat(proj_slides_txt, sep = "")
 
 
 ```{r drake-intro, echo=FALSE, results="asis"}
-drake_intro <- dir("assets/images/drawn", pattern = "drake-intro-\\d+[.].webp$", full.names = TRUE)
+drake_intro <- dir("assets/images/drawn", pattern = "drake-intro-\\d+[.].jpg$", full.names = TRUE)
 
 drake_intro_txt <- glue::glue("
 
