@@ -83,7 +83,7 @@ class: inverse center middle hide-count
 ---
 
 ```{r messy-data-workflow, echo=FALSE, results="asis"}
-messy_slides <- dir("assets/images/drawn", pattern = "messy.+.jpg$", full.names = TRUE)
+messy_slides <- dir("assets/images/drawn", pattern = "messy.+jpg$", full.names = TRUE)
 
 messy_slides_txt <- glue::glue("
 
@@ -113,7 +113,7 @@ background-size: contain
 ---
 
 ```{r project-spectrum, echo=FALSE, results="asis"}
-proj_slides <- dir("assets/images/drawn", pattern = "project.+.jpg$", full.names = TRUE)
+proj_slides <- dir("assets/images/drawn", pattern = "project.+jpg$", full.names = TRUE)
 
 proj_slides_txt <- glue::glue("
 
@@ -130,7 +130,7 @@ cat(proj_slides_txt, sep = "")
 
 
 ```{r drake-intro, echo=FALSE, results="asis"}
-drake_intro <- dir("assets/images/drawn", pattern = "drake-intro-\\d+[.].jpg$", full.names = TRUE)
+drake_intro <- dir("assets/images/drawn", pattern = "drake-intro-\\d+[.]jpg$", full.names = TRUE)
 
 drake_intro_txt <- glue::glue("
 
