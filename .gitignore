@@ -1,6 +1,7 @@
 report.html
 report_files/
 .drake
+README.html
 
 # ---- Default .gitignore From grkmisc ----
 .Rproj.user
