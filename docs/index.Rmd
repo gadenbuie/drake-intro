@@ -344,7 +344,7 @@ The formula for converting Celsius to Fahrenheit is
 .muted.w-60[
 Extra challenge:
 
-* Your friend is Canadian and keeps sharing their local whether in &deg;C.
+* Your friend is Canadian and keeps sharing their local weather in &deg;C.
   Write a function that decides if it's hot or not based on the infinitely more reasonable threshold of 78&deg;F.
   
 * 78&deg;F is a debatable, make it a parameter
