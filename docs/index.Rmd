@@ -435,15 +435,42 @@ verb <- function(x) {
 
 Return early from functions to minimize `if ... else` indenting
 
+.absolute.pa3.red.bg-washed-red.bottom-2.right-0.w-40.f2[&#x2639;]
+
+```{r eval=FALSE, class="ba b--red bg-washed-red"}
+verb <- function(df) {
+  
+  # check that data is valid
+  
+  if (nrow(df) > 0) {
+    # process the valid data
+    answer <- df %>% 
+      # ... many
+      # ... lines
+      # ... of code
+  } else {
+    # or give back a default value
+    answer <- FALSE
+  }
+  
+  answer
+}
+```
+
+---
+
+Return early from functions to minimize `if ... else` indenting
+
 ```{r eval=FALSE}
 verb <- function(df) {
-  # some prep work ...
   
-  if (!nrow(df)) {
+  # check that data is valid
+  
+  if (nrow(df) == 0) {
     return(FALSE)
   }
   
-  # ... keep going if ok
+  # ... process the valid data
 }
 ```
 
