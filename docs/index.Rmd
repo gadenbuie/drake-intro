@@ -183,7 +183,7 @@ class: animated fadeIn
 
 .f1.mt4.pa4.code[
 .o-0[verb <- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3.o-0[x, y = 0, ...]) {]  
-.moffitt-green.mh3.pv1.ph4[
+.moffitt-green.mh3.pv1.ph1[
 x_range <- max(x) - min(x)
 
 (x - min(x)) / x_range + y
@@ -194,119 +194,146 @@ x_range <- max(x) - min(x)
  
 ---
 
-.f1.mt4.pa4.code[
-.o-0[verb <- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3.o-0[x, y = 0, ...]) {]  
-.moffitt-bg-green.moffitt-green.mh3.pv1.ph4[
+.f1.mt4.pa4.code.dark-gray[
+.o-0[verb <- function(.moffitt-bg-blue.moffitt-blue.pa3.o-0[x, y = 0, ...]) {]  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph1[
 x_range <- max(x) - min(x)
 
 (x - min(x)) / x_range + y
 ]
 
-.o-0.dark-gray[}]
+.o-0[}]
 ]
 
 ---
 
-.f1.mt4.pa4.code[
-verb <- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3.o-0[x, y = 0, ...]) {  
-.moffitt-bg-green.moffitt-green.mh3.pv1.ph4[
+.f1.mt4.pa4.code.dark-grey[
+verb <- function() {  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph1.o-60[
 x_range <- max(x) - min(x)
 
 (x - min(x)) / x_range + y
 ]
 
-.dark-gray[}]
+}
 ]
 
 ---
 
-.f1.mt4.pa4.code[
-verb <- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3[x, y = 0, ...]) {  
-.moffitt-bg-green.moffitt-green.mh3.pv1.ph4.o-40[
+.f1.mt4.pa4.code.dark-gray[
+verb <- function(.moffitt-bg-blue.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph1.o-40[
 x_range <- max(x) - min(x)
 
 (x - min(x)) / x_range + y
 ]
 
-.dark-gray[}]
+}
 ]
-    
+
 ---
 
-.f1.mt4.pa4.code[
-verb <- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3[x, y = 0, ...]) {  
-.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+.f1.mt4.pa4.code.dark-gray[
+verb <- function(.moffitt-bg-blue.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o10.moffitt-green.mh3.pv1.ph1[
 x_range <- max(x) - min(x)
 
 (x - min(x)) / x_range + y
 ]
 
-.dark-gray[}]
+}
 ]
-    
+
 ---
 
-.f1.mt4.pa4.code[
-verb <- .dark-gray[function(].moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
-.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+.f1.mt4.pa4.code.dark-gray[
+verb <- function(.moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o10.moffitt-green.mh3.pv1.ph1[
 x_range <- max(.moffitt-blue[x]) - min(.moffitt-blue[x])
 
 (.moffitt-blue[x] - min(.moffitt-blue[x])) / x_range + .moffitt-blue[y]
 ]
 
-.dark-gray[}]
+}
 ]
-    
+
 ---
 
-.f1.mt4.pa4.code[
-verb <- .dark-gray[function(].moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
-.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+.f1.mt4.pa4.code.dark-gray[
+verb <- function(.moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o10.moffitt-green.mh3.pv1.ph1[
 x_range <- max(.moffitt-blue[x]) - min(.moffitt-blue[x])
 
 .moffitt-bg-orange-o20[(.moffitt-blue[x] - min(.moffitt-blue[x])) / x_range + .moffitt-blue[y]]
 ]
 
-.dark-gray[}]
+}
 ]
 
 ---
 
-.f1.mt4.pa4.code.moffitt-bg-grey-o20[
-verb <- .dark-gray[function(].moffitt-bg-blue.moffitt-blue.pa3.o-30[x, y = 0, ...]) {  
-.moffitt-bg-green.moffitt-green.mh3.pv1.ph4.o-50[
+.f1.mt4.pa4.code.dark-gray[
+verb <- function(.moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o10.moffitt-green.mh3.pv1.ph1[
+x_range <- max(.moffitt-blue[x]) - min(.moffitt-blue[x])
+
+.moffitt-bg-orange-o20[.moffitt-orange[return(](.moffitt-blue[x] - min(.moffitt-blue[x])) / x_range + .moffitt-blue[y].moffitt-orange[)]]
+]
+
+}
+]
+
+---
+
+.f1.mt4.pa4.code.dark-gray.moffitt-bg-grey-o20.ba.b--dotted.bw2.b--dark-gray.border-box[
+verb <- function(.moffitt-bg-blue.moffitt-blue.pa3.o-30[x, y = 0, ...]) {  
+.moffitt-bg-green.moffitt-green.mh3.pv1.ph1.o-40[
 x_range <- max(x) - min(x)
 
 (x - min(x)) / x_range + y
 ]
 
-.dark-gray[}]
+}
 ]
-    
+
 ---
 
-.f1.mt4.pa4.code.moffitt-bg-grey-o20[
-scale <- .dark-gray[function(].moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
-.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+
+.f1.mt4.pa4.code.dark-gray.moffitt-bg-grey-o20[
+verb <- function(.moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o10.moffitt-green.mh3.pv1.ph1[
 x_range <- max(.moffitt-blue[x]) - min(.moffitt-blue[x])
 
 (.moffitt-blue[x] - min(.moffitt-blue[x])) / x_range + .moffitt-blue[y]
 ]
 
-.dark-gray[}]
+}
 ]
-    
+
 ---
 
-.f1.mt4.pa4.code.moffitt-bg-grey-o20[
-scale <- .dark-gray[function(].moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, .moffitt-red[...]]) {  
-.moffitt-bg-green-o20.moffitt-green.mh3.pv1.ph4[
+.f1.mt4.pa4.code.dark-gray.moffitt-bg-grey-o20[
+scale <- function(.moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, ...]) {  
+.moffitt-bg-green-o10.moffitt-green.mh3.pv1.ph1[
+x_range <- max(.moffitt-blue[x]) - min(.moffitt-blue[x])
+
+(.moffitt-blue[x] - min(.moffitt-blue[x])) / x_range + .moffitt-blue[y]
+]
+
+}
+]
+
+---
+
+.f1.mt4.pa4.code.dark-gray.moffitt-bg-grey-o20[
+scale <- function(.moffitt-bg-blue-o20.moffitt-blue.pa3[x, y = 0, .moffitt-red[...]]) {  
+.moffitt-bg-green-o10.moffitt-green.mh3.pv1.ph1[
 x_r <- max(.moffitt-blue[x], .moffitt-red[...]) - min(.moffitt-blue[x], .moffitt-red[...])
 
 (.moffitt-blue[x] - min(.moffitt-blue[x], .moffitt-red[...])) / x_r + .moffitt-blue[y]
 ]
 
-.dark-gray[}]
+}
 ]
 
 ---
