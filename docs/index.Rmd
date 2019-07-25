@@ -623,15 +623,14 @@ Functions
 ]
 ]
 
-### Credit
-
-Icons by [Github octicons](https://octicons.github.com/) and the following [Noun Project](https://thenounproject.com/search/?q=Report&i=180805) icon creators:
-
-- [Kirby Wu, TW](https://thenounproject.com/search/?q=json&i=966215)
-- [Iga](https://thenounproject.com/search/?q=document&i=2711779)
-- [Lil Squid](https://thenounproject.com/search/?q=report&i=149914)
-- [Wichai Wi](https://thenounproject.com/search/?q=results&i=2294590)
-- [Nick Kinling](https://thenounproject.com/search/?q=detour&i=788361)
+.footnote[
+**Credit:** Icons by [Github octicons](https://octicons.github.com/) and the following [Noun Project](https://thenounproject.com/search/?q=Report&i=180805) icon creators:
+[Kirby Wu, TW](https://thenounproject.com/search/?q=json&i=966215),
+[Iga](https://thenounproject.com/search/?q=document&i=2711779),
+[Lil Squid](https://thenounproject.com/search/?q=report&i=149914),
+[Wichai Wi](https://thenounproject.com/search/?q=results&i=2294590),
+[Nick Kinling](https://thenounproject.com/search/?q=detour&i=788361).
+]
 
 
 ```{css echo=FALSE}

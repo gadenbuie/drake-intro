@@ -632,7 +632,7 @@ Extra challenge:
 * 78&amp;deg;F is a debatable, make it a parameter
 ]
 
-<div class="countdown" id="timer_5d3a003e" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d3a08c1" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -694,16 +694,44 @@ verb &lt;- function(x) {
 
 Return early from functions to minimize `if ... else` indenting
 
+.absolute.pa3.red.bg-washed-red.bottom-2.right-0.w-40.f2[&amp;#x2639;]
+
 
 ```r
 verb &lt;- function(df) {
-  # some prep work ...
   
-  if (!nrow(df)) {
+  # check that data is valid
+  
+  if (nrow(df) &gt; 0) {
+    # process the valid data
+    answer &lt;- df %&gt;% 
+      # ... many
+      # ... lines
+      # ... of code
+  } else {
+    # or give back a default value
+    answer &lt;- FALSE
+  }
+  
+  answer
+}
+```
+
+---
+
+Return early from functions to minimize `if ... else` indenting
+
+
+```r
+verb &lt;- function(df) {
+  
+  # check that data is valid
+  
+  if (nrow(df) == 0) {
     return(FALSE)
   }
   
-  # ... keep going if ok
+  # ... process the valid data
 }
 ```
 
@@ -736,7 +764,7 @@ class: middle center moffitt-bg-light-blue white hide-count
 Update your temperature conversion function to reject  
 non-numeric, unreasonable inputs
 
-<div class="countdown" id="timer_5d3a011e" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d3a0ad2" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -811,7 +839,7 @@ The life expectancy plot currently only shows results for Tampa.
 
 * Add .b[Denver] to the .moffitt-bg-grey-o20.moffitt-blue.code.pa2[report.Rmd] to compare with .b[Tampa].
 
-<div class="countdown" id="timer_5d3a0044" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5d3a0abb" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -861,15 +889,14 @@ Functions
 ]
 ]
 
-### Credit
-
-Icons by [Github octicons](https://octicons.github.com/) and the following [Noun Project](https://thenounproject.com/search/?q=Report&amp;i=180805) icon creators:
-
-- [Kirby Wu, TW](https://thenounproject.com/search/?q=json&amp;i=966215)
-- [Iga](https://thenounproject.com/search/?q=document&amp;i=2711779)
-- [Lil Squid](https://thenounproject.com/search/?q=report&amp;i=149914)
-- [Wichai Wi](https://thenounproject.com/search/?q=results&amp;i=2294590)
-- [Nick Kinling](https://thenounproject.com/search/?q=detour&amp;i=788361)
+.footnote[
+**Credit:** Icons by [Github octicons](https://octicons.github.com/) and the following [Noun Project](https://thenounproject.com/search/?q=Report&amp;i=180805) icon creators:
+[Kirby Wu, TW](https://thenounproject.com/search/?q=json&amp;i=966215),
+[Iga](https://thenounproject.com/search/?q=document&amp;i=2711779),
+[Lil Squid](https://thenounproject.com/search/?q=report&amp;i=149914),
+[Wichai Wi](https://thenounproject.com/search/?q=results&amp;i=2294590),
+[Nick Kinling](https://thenounproject.com/search/?q=detour&amp;i=788361).
+]
 
 
 &lt;style type="text/css"&gt;
