@@ -11,7 +11,7 @@ output:
       - assets/css/moffitt-xaringan.css
       - assets/css/moffitt-colors.css
     seal: false
-    mathjax: false
+    mathjax: NULL
     chakra: libs/remark-latest.min.js
     nature:
       titleSlideClass: ["bottom", "left"]
