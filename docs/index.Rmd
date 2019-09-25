@@ -6,7 +6,7 @@ output:
   xaringan::moon_reader:
     lib_dir: libs
     css:
-      - "assets/css/tachyons.min.css" 
+      - assets/css/tachyons.min.css
       - assets/css/animate.css
       - assets/css/moffitt-xaringan.css
       - assets/css/moffitt-colors.css
@@ -29,8 +29,13 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r required-packages, eval=FALSE, include=FALSE}
+devtools::install_github("gadenbuie/metathis@05f8ba1f")
+devtools::install_github("gadenbuie/countdown@5c895d980")
+```
+
 ```{r meta, echo=FALSE}
-library(htmlmeta)
+library(metathis)
 meta() %>%
   meta_general(
     description = "A gentle introduction to reproducible data workflows with the {drake} package.",
@@ -46,8 +51,7 @@ meta() %>%
     og_author = "Garrick Aden-Buie",
     twitter_card_type = "summary_large_image",
     twitter_creator = "@grrrck"
-  ) %>% 
-  include_meta()
+  )
 ```
 
 class: left bottom hide-count
